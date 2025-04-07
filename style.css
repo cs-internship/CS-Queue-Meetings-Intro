@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Vazirmatn", sans-serif;
+    z-index: 2;
+}
+
+body {
+    direction: rtl;
+    background-color: #222;
+    color: rgb(246, 246, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    height: 100vh;
+    gap: 2.4vh;
+    font-size: 2.7vh;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: "Vazirmatn";
+    src: url("Vazirmatn-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+img {
+    height: 56vh;
+}
+
+div {
+    text-shadow: 0 0 1vh #1d1d1d;
+}
+
+.dvd-csi {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    height: 10vh;
+    width: 10vh;
+    background: url("./dvd-csi.png") center/cover no-repeat;
+    opacity: 0.8;
+}
+
+.special-mode {
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    z-index: 1;
+    height: 4vh;
+    width: 20vh;
+    opacity: 0.02;
+    font-size: 2.5vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: opacity 0.3s;
+}
+.special-mode:hover {
+    opacity: 0.8;
+}
+
+.fullscreen-btn {
+    z-index: 3;
+    background-color: #111111;
+    border: none;
+    color: #fff;
+    font-size: 2.5vh;
+    border-radius: 1vh;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: blink 0.4s ease-in-out infinite alternate;
+    width: 24vh;
+    height: 8vh;
+}
+
+@keyframes blink {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
