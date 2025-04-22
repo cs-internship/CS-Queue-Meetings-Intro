@@ -38,3 +38,32 @@ specialModeCheckbox.addEventListener("change", () => {
 });
 
 dvd.style.display = "none";
+
+const updateCountdown = () => {
+    const now = new Date();
+    const target = new Date();
+    target.setHours(18, 0, 0, 0);
+
+    const countdownEl = document.querySelector(".countdown");
+
+    if (now > target) {
+        countdownEl.innerText = "🎉🎉🎉🎉🎉";
+        return;
+    }
+
+    const diff = target - now;
+
+    const hours = String(Math.floor(diff / (1000 * 60 * 60))).padStart(2, "0");
+    const minutes = String(
+        Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+    ).padStart(2, "0");
+    const seconds = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(
+        2,
+        "0"
+    );
+
+    countdownEl.innerText = `${hours}:${minutes}:${seconds}`;
+};
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
