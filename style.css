@@ -22,7 +22,7 @@ body {
 
 @font-face {
     font-family: "Vazirmatn";
-    src: url("Vazirmatn-Regular.ttf") format("truetype");
+    src: url("./assets/Vazirmatn-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -39,31 +39,85 @@ div {
     z-index: 1;
     height: 10vh;
     width: 10vh;
-    background: url("./dvd-csi.png") center/cover no-repeat;
-    opacity: 0.8;
-}
-
-.special-mode {
-    position: absolute;
-    left: 0px;
-    top: 10px;
-    z-index: 1;
-    height: 4vh;
-    width: 20vh;
-    opacity: 0.02;
-    font-size: 2.5vh;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    transition: opacity 0.3s;
-}
-.special-mode:hover {
+    background: url("./assets/dvd-csi.png") center/cover no-repeat;
     opacity: 0.8;
 }
 
 .countdown {
     font-size: 14vh;
     padding: 5vh;
+}
+
+.setting-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 52px;
+    height: 52px;
+    background: url("./assets/setting-icon.svg") center/cover no-repeat;
+    cursor: pointer;
+    transition: transform 0.3s;
+    z-index: 3;
+}
+
+.setting-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 14px));
+    width: 500px;
+    height: 280px;
+    background-color: rgb(8, 8, 8);
+    box-shadow: 0 0 3000px 3000px rgba(0, 0, 0, 0.5);
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 24px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.setting-modal.show {
+    display: flex;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.modal-header {
+    padding: 18px 0 20px;
+}
+
+.header-EE {
+    margin: 0 5px 0 5px;
+    cursor: default;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+}
+
+.ICARUS {
+    cursor: pointer;
+    transition: color 0.15s;
+}
+.ICARUS:hover {
+    color: rgb(131, 135, 255);
+}
+
+.modal-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 84%;
+    gap: 12px;
+}
+.modal-content div {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
 }

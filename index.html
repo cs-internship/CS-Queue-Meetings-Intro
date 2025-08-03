@@ -4,21 +4,25 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./style.css" />
-        <link rel="icon" type="image/png" href="./csi-icon-32.png" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/micromodal/dist/micromodal.min.css"
+        />
+        <link rel="icon" type="image/png" href="./assets/csi-icon-32.png" />
 
         <title>CS Queue Meetings Intro</title>
     </head>
     <body>
         <div class="greeting">سلام دوستان، خوش آمدید🌱</div>
 
-        <div>جلسه ساعت ۱۸:۰۰ شروع خواهد شد.</div>
+        <div class="greeting">جلسه ساعت ۱۸:۰۰ شروع خواهد شد.</div>
 
-        <div>
+        <div class="qa-greeting">
             لطفاً پیش از شروع جلسه، یوزرنیم اکانت تلگرام خود را از طریق پیام
             خصوصی برای «بات گروه صف» ارسال کنید.
         </div>
 
-        <div>
+        <div class="qa-greeting">
             این‌ کار برای به‌روزرسانی کارت حضور شما در جلسات معارفه و ورود به
             برنامه لازم است.
         </div>
@@ -29,9 +33,31 @@
 
         <div class="dvd-csi"></div>
 
-        <div class="special-mode">
-            <input type="checkbox" class="special-mode-checkbox" />
-            <div>Special Mode</div>
+        <div class="setting-btn"></div>
+
+        <div class="setting-modal">
+            <div class="modal-header">
+                <a class="header-EE ICARUS" target="_blank">-</a>
+                Settings
+                <a class="header-EE ICARUS" target="_blank">-</a>
+            </div>
+
+            <div class="modal-content">
+                <div class="special-mode">
+                    <input type="checkbox" class="special-mode-checkbox" />
+                    <div>Special Mode</div>
+                </div>
+
+                <div class="interview-mode">
+                    <input type="checkbox" class="interview-mode-checkbox" />
+                    <div>Interview Mode</div>
+                </div>
+
+                <div class="meeting-time">
+                    <input type="time" class="meeting-time-checkbox" />
+                    <div>Meeting Time</div>
+                </div>
+            </div>
         </div>
 
         <script src="./script.js"></script>
