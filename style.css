@@ -4,7 +4,10 @@
     box-sizing: border-box;
     font-family: "Vazirmatn", sans-serif;
     z-index: 2;
+    user-select: none;
 }
+
+/* 1vh === 8px */
 
 body {
     direction: rtl;
@@ -50,30 +53,35 @@ div {
 
 .setting-btn {
     position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 52px;
-    height: 52px;
+    top: 1vh;
+    right: 1vh;
+    width: 6.5vh;
+    height: 6.5vh;
     background: url("./assets/setting-icon.svg") center/cover no-repeat;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s 1.2s;
     z-index: 3;
+    opacity: 0.3;
+}
+.setting-btn:hover {
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 1;
 }
 
 .setting-modal {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, calc(-50% - 14px));
-    width: 500px;
-    height: 280px;
+    transform: translate(-50%, calc(-50% - 1.8vh));
+    width: 62.5vh;
+    height: 36vh;
     background-color: rgb(8, 8, 8);
     box-shadow: 0 0 3000px 3000px rgba(0, 0, 0, 0.5);
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid #fff;
-    border-radius: 24px;
+    border: 0.125vh solid #fff;
+    border-radius: 3vh;
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -86,11 +94,11 @@ div {
 }
 
 .modal-header {
-    padding: 18px 0 20px;
+    padding: 2.25vh 0 2.5vh;
 }
 
 .header-EE {
-    margin: 0 5px 0 5px;
+    margin: 0 0.625vh 0 0.625vh;
     cursor: default;
     text-decoration: none;
     color: white;
@@ -111,7 +119,7 @@ div {
     justify-content: center;
     align-items: center;
     width: 84%;
-    gap: 12px;
+    gap: 1.5vh;
 }
 .modal-content div {
     width: 100%;
@@ -119,5 +127,20 @@ div {
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
-    gap: 10px;
+    gap: 1.25vh;
+}
+
+input[type="checkbox"] {
+    accent-color: rgb(82, 93, 248);
+    width: 3vh;
+    height: 3vh;
+    padding-inline: 0;
+    padding-block: 0;
+}
+
+input[type="time"] {
+    font-size: 2.25vh;
+    color: black;
+    width: 20vh;
+    height: 4.75vh;
 }

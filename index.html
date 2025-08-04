@@ -15,7 +15,9 @@
     <body>
         <div class="greeting">سلام دوستان، خوش آمدید🌱</div>
 
-        <div class="greeting">جلسه ساعت ۱۸:۰۰ شروع خواهد شد.</div>
+        <div class="greeting">
+            جلسه ساعت <span class="meeting-time">۱۸:۰۰</span> شروع خواهد شد.
+        </div>
 
         <div class="qa-greeting">
             لطفاً پیش از شروع جلسه، یوزرنیم اکانت تلگرام خود را از طریق پیام
@@ -43,18 +45,22 @@
             </div>
 
             <div class="modal-content">
-                <div class="special-mode">
-                    <input type="checkbox" class="special-mode-checkbox" />
-                    <div>Special Mode</div>
-                </div>
-
                 <div class="interview-mode">
                     <input type="checkbox" class="interview-mode-checkbox" />
                     <div>Interview Mode</div>
                 </div>
 
-                <div class="meeting-time">
-                    <input type="time" class="meeting-time-checkbox" />
+                <div class="special-mode">
+                    <input type="checkbox" class="special-mode-checkbox" />
+                    <div>DVD Mode</div>
+                </div>
+
+                <div class="meeting-setting">
+                    <input
+                        type="time"
+                        value="18:00"
+                        class="meeting-time-input"
+                    />
                     <div>Meeting Time</div>
                 </div>
             </div>
